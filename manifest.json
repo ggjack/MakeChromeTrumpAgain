@@ -1,5 +1,5 @@
 {
-	"name" : "Make Chrome Trump Again",
+	"name" : "Make Chrome, Trump Again",
 	"version" : "1000000.00",
 	"manifest_version" : 2,
 	"description" : "Lets the user see a glorious face while filtering useless and unnecessary websites",
@@ -7,15 +7,20 @@
 			"128" : "images/icon128off.png",
 			"128" : "images/icon128.png"
 		},
-	"background" : {
-			"scripts" : ["background.js"]		
-	},	
+	"background": {
+    		"scripts": [ "jquery-1.12.2.min.js", "background.js" ],
+    		"persistent": true
+		
+	},
+
 	"options_page" : "options.html",
 	"browser_action" : {
 		"default_title" : "Make Chrome Trump Again",
 		"default_icon" : "images/icon128off.png"
 	},
 	"permissions" : [
-
+		"webNavigation",
+		"activeTab",
+		"tabs"
 	]
 }

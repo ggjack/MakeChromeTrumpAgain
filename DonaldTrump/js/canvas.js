@@ -293,7 +293,7 @@ $(function() {
 	function Particle(x, y, vx, vy){
 		this.pos = new Vector(x, y);
 		this.vel = new Vector(vx, vy);
-		this.size = 2 + 4 * Math.random();
+		this.size = 20 + 4 * Math.random();
 	}
 
 		// Moves the particle based on velocity
