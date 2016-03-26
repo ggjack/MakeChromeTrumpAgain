@@ -1,0 +1,14 @@
+{
+	"name" : "Make Chrome Trump Again",
+	"version" : "1000000.00",
+	"manifest_version" : 2,
+	"description" : "Lets the user see a glorious face while filtering useless and unnecessary websites",
+	"icons" : {
+		
+		},
+	"background" : {
+		
+	}	
+	"options_page" : "options.html",
+
+}
