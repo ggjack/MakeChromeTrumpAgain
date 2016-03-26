@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    body {
+        background-image: url("img/skyline.png");
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Jack Cheryl Heather</title>
+
+    <!-- Bootstrap -->
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://js.leapmotion.com/leap-0.6.4.js"></script>
+    <script src="https://js.leapmotion.com/leap-plugins-0.1.11.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/canvas.js"></script> 
+ </head>
+  <body id="body" onclick = "play()">
+
+    <script>
+    function play(){
+        var audio = new Audio();
+        var randum = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+        if(randum == 1)
+        {
+            audio.src = "img/solidperson.wav"
+        }
+        else if(randum == 2)
+        {
+            audio.src = "img/idealwiththechinese.wav"
+        }
+        else if(randum == 3)
+        {
+            audio.src = "img/worstpresident.mp3"
+        }
+        else if(randum == 4)
+        {
+            audio.src = "img/boardroom.mp3"
+        }
+        audio.play();
+                 }
+    </script>
+
+    <audio id="audio" src="img/solidperson.wav" ></audio>
+
+	<!-- The scenery and canvas of the website -->
+	<img id="background" class="img-responsive" src="skyline.png"/>
+    <canvas id="canvas" ></canvas>
+    <!--<img id="midground" class="img-responsive" src="img/Skyline2.png" alt="U of T Hacks branding"/>-->
+	<div><h2 id="title">MAKE UWATERLOO GREAT AGAIN</h2></div>
+    <!--<img id="foreground" class="img-responsive" src="img/Skyline.png" alt="U of T Hacks branding"/>-->
+	<div id="timeArea"><h3 id="time">Trump Time</a></h3></div>
+
+  </body>
+</html>
