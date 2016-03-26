@@ -21,6 +21,9 @@
 	"permissions" : [
 		"webNavigation",
 		"activeTab",
-		"tabs"
+		"tabs",
+		"webRequest",
+        "*://*/*",
+        "webRequestBlocking"
 	]
 }

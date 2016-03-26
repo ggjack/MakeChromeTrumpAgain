@@ -28,7 +28,7 @@ function toggle(){
 $(document).mousemove(function(e) {
     	$(followImg).css({left:e.pageX, top:e.pageY});
 });
-
+*/
 	chrome.tabs.onMoved.addListener(function(){
 	if(state){
 		//var rand= Math.random();
@@ -40,9 +40,9 @@ $(document).mousemove(function(e) {
 
 }
 });
-*/
 
-chrome.webRequest.onBeforeRequest.addListener(
+chrome.browserAction.onClicked.addListener(toggle);
+/*chrome.webRequest.onBeforeRequest.addListener(
 function(e){
 	if(state){return{
         redirectUrl : chrome.extension.getURL("DonaldTrump/donaldtrump.html")
@@ -51,13 +51,11 @@ function(e){
 		}
 	 },
    {
-       urls: ["*://*/*"]
-},
-   ["blocking"]
+ //      urls: ["*://*///*"]
+//},
+ //  ["blocking"]
 
-);
-
-chrome.browserAction.onClicked.addListener(toggle);
+//);
 
 
 
